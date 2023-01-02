@@ -26,7 +26,7 @@ dind_build:
     - docker push $CI_REGISTRY_IMAGE:$CI_COMMIT_SHORT_SHA
     - docker push $CI_REGISTRY_IMAGE:latest
   after_script:
-    - docker logout
+    - docker logout $CI_REGISTRY
 
 # test_mis_react:
 #   stage: test
@@ -48,4 +48,4 @@ deploye_newimage:
     - docker-compose down
     - docker-compose up -d
   after_script:
-    - docker logout
+    - docker logout $CI_REGISTRY
