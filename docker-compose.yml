@@ -10,6 +10,6 @@ services:
       - elyas
 
 networks:
-  isaco:
+  karama:
     name: elyas
     external: true
