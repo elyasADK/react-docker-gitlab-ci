@@ -59,7 +59,7 @@ deploy_production:
   script:
     - docker-compose up -d
   after_script:
-    - docker logout
+    - docker logout $CI_REGISTRY
 
 deploy_test:
   stage: deploy_test
